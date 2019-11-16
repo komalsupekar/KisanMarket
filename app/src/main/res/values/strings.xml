@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">KisanMarket</string>
+    <string name="view_products">view products</string>
+    <string name="placeholder">placeholder</string>
 </resources>
