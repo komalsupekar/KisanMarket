@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -14,6 +15,10 @@ import android.widget.ImageView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.Serializable;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,17 +38,30 @@ public class MainActivity extends AppCompatActivity {
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbref = database.getReference("farmers");
+        DatabaseReference dbref = database.getReference("markets");
 
-        dbref.setValue("first farmer");
+        class farmer {
+            public String name, market;
 
+            farmer(String name, String market) {
+
+                this.name = name;
+                this.market = market;
+            }
+        }
+
+        farmer f1 = new farmer("maddy","shreepur");
+
+        dbref.child("Pune city").setValue(f1);
 
         Thread kthread = new Thread(){
+            public int counter = 0;
 
             @Override
             public void run() {
                 while (true)
                 {
+
                     try {
                         Thread.sleep(4000);
                     } catch (InterruptedException e) {
@@ -95,20 +113,19 @@ public class MainActivity extends AppCompatActivity {
 
                         @Override
                         public void run() {
-                            int randomImage, counter = 0;
+                            int randomImage;
                             Random random = new Random();
                             randomImage = images[random.nextInt(images.length)];
                             karousel.setAnimation(AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade));
                             karousel.setImageResource(randomImage);
 
-                            Log.d(TAG, "run: " + counter++);
+                            Log.d(TAG, "run: " +counter++);
                             Log.d(TAG, "image " + getImage(randomImage));
                         }
                     });
                 }
             }
         };
-
         kthread.start();
     }
 

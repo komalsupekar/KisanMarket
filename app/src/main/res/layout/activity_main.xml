@@ -38,7 +38,7 @@
                android:layout_height="wrap_content"
                android:id="@+id/p2"
                style="@style/kbutton"
-               android:text="@string/placeholder"/>
+               android:text="market details"/>
 
 
            <Button
