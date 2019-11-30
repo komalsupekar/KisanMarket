@@ -1,5 +1,6 @@
 package com.komal.krypton.kisan.market;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,15 +10,14 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.Random;
 
 public class dashboard extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     ImageView karousel;
     Button add, view;
+
+    String farmerName;
 
     int[] images = new int[]{ R.drawable.c1,R.drawable.c2,R.drawable.c3,R.drawable.c4,R.drawable.c5,R.drawable.c6,R.drawable.c7,R.drawable.c9};
 
@@ -29,23 +29,6 @@ public class dashboard extends AppCompatActivity {
 
         karousel = findViewById(R.id.karousel);
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference dbref = database.getReference("markets");
-
-        class farmer {
-            public String name;
-
-            farmer(String name) {
-
-                this.name = name;
-            }
-        }
-
-        farmer f1 = new farmer(getIntent().getExtras().getString("farmer"));
-
-        String market = getIntent().getExtras().getString("city");
-        dbref.child(market).setValue(f1);
 
         Thread kthread = new Thread(){
             public int counter = 0;
@@ -128,7 +111,18 @@ public class dashboard extends AppCompatActivity {
 
         public void add(View view)
         {
-            Bundle push = new Bundle();
+            farmerName = getIntent().getExtras().getString("farmer");
+            Intent i = new Intent(getApplicationContext(),addItems.class);
+            i.putExtra("farmer",farmerName);
+            i.putExtra("city","pune");
+            Log.d(TAG, "add: farmer :" +farmerName);
+            startActivity(i);
+        }
+
+
+        public void show(View view)
+        {
+
         }
 
 

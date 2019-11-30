@@ -32,7 +32,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/view"
                 style="@style/kbutton"
-                android:text="@string/view_products"/>
+                android:onClick="add"
+                android:text="Add products"/>
 
             <Button
                 android:layout_width="match_parent"

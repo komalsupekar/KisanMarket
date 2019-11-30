@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".dashboard"></activity>
+        <activity android:name=".addItems" android:label="Add items"></activity>
+        <activity android:name=".dashboard" />
         <activity
             android:name=".login"
             android:label="@string/title_activity_login" />
