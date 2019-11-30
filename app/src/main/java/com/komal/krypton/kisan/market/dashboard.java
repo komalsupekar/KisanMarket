@@ -16,7 +16,6 @@ public class dashboard extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     ImageView karousel;
 
-
     int[] images = new int[]{ R.drawable.c1,R.drawable.c2,R.drawable.c3,R.drawable.c4,R.drawable.c5,R.drawable.c6,R.drawable.c7,R.drawable.c9};
 
     @Override
@@ -42,7 +41,8 @@ public class dashboard extends AppCompatActivity {
 
         farmer f1 = new farmer("maddy");
 
-        dbref.child("Pune city").setValue(f1);
+        String market = getIntent().getExtras().getString("city");
+        dbref.child(market).setValue(f1);
 
         Thread kthread = new Thread(){
             public int counter = 0;
