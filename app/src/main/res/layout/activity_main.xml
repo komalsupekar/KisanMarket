@@ -48,7 +48,6 @@
                style="@style/kbutton"
                android:text="@string/placeholder"/>
 
-
        </LinearLayout>
     </ScrollView>
 </LinearLayout>
