@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".dashboard"></activity>
         <activity
             android:name=".login"
             android:label="@string/title_activity_login" />
@@ -23,8 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:label="Select marketplace"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Select marketplace" />
     </application>
 
 </manifest>
