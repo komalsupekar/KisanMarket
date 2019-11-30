@@ -14,6 +14,57 @@
         android:src="@drawable/farmer"
         android:adjustViewBounds="true" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"/>
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter username"
+        style="@style/TextAppearance.AppCompat"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:imeOptions="actionNext"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter password"
+        style="@style/TextAppearance.AppCompat"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:gravity="center"
+        android:imeOptions="actionDone"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:id="@+id/log"/>
 
 </LinearLayout>

@@ -2,7 +2,9 @@ package com.komal.krypton.kisan.market;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import java.util.Random;
 public class dashboard extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     ImageView karousel;
+    Button add, view;
 
     int[] images = new int[]{ R.drawable.c1,R.drawable.c2,R.drawable.c3,R.drawable.c4,R.drawable.c5,R.drawable.c6,R.drawable.c7,R.drawable.c9};
 
@@ -39,7 +42,7 @@ public class dashboard extends AppCompatActivity {
             }
         }
 
-        farmer f1 = new farmer("maddy");
+        farmer f1 = new farmer(getIntent().getExtras().getString("farmer"));
 
         String market = getIntent().getExtras().getString("city");
         dbref.child(market).setValue(f1);
@@ -121,6 +124,12 @@ public class dashboard extends AppCompatActivity {
 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+        public void add(View view)
+        {
+            Bundle push = new Bundle();
+        }
 
 
 }

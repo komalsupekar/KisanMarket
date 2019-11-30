@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         //  add cities and their specialities dynamically
         String[] cities = {"Pune", "Mahabaleshwar", "Nagpur","Mumbai","Nashik"};
 
+        final String farmer = getIntent().getExtras().getString("farmer");
 
         int[] images = {R.drawable.pune, R.drawable.strawberry, R.drawable.nagpur, R.drawable.mumbai,R.drawable.grapes};
 
@@ -36,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
                 TextView tv = view.findViewById(R.id.cityname);
                 Toast.makeText(getApplicationContext(),tv.getText().toString(),Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getApplicationContext(),dashboard.class);
+                i.putExtra("farmer",farmer);
+
                 switch (tv.getText().toString().trim().toLowerCase()){
                     case "pune":
                         i.putExtra("city","pune");
