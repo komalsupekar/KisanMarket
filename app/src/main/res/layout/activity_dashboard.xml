@@ -44,12 +44,6 @@
                 android:text="market details"/>
 
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/p1"
-                style="@style/kbutton"
-                android:text="@string/placeholder"/>
 
         </LinearLayout>
     </ScrollView>
