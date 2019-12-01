@@ -1,6 +1,6 @@
-### KisanMarket
-## Team : impulse
-[Komal Supekar](https://github.com/komalsupekar)
+# KisanMarket
+### Team : impulse
+[Komal Supekar](https://github.com/komalsupekar)  \
 [Madhusudan babar](https://github.com/madhusudanbabar)
 
 
