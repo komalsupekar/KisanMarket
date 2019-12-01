@@ -1,7 +1,8 @@
 ### KisanMarket
 ## Team : impulse
+[Komal Supekar](https://github.com/komalsupekar)
+[Madhusudan babar](https://github.com/madhusudanbabar)
+
 
 ![alt text](ss.png)
-[a link](https://github.com/user/repo/blob/branch/other_file.md)
-
 This app will provide the farmers their marketplace by cutting the meddle supply chain
