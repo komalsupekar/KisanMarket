@@ -122,7 +122,8 @@ public class dashboard extends AppCompatActivity {
 
         public void show(View view)
         {
-
+            Intent intent = new Intent(getApplicationContext(),showProducts.class);
+            startActivity(intent);
         }
 
 
