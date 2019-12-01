@@ -4,5 +4,5 @@
 [Madhusudan babar](https://github.com/madhusudanbabar)
 
 
-![alt text](ss.png)
+![alt text](https://github.com/komalsupekar/KisanMarket/blob/master/app/ss.png)
 This app will provide the farmers their marketplace by cutting the meddle supply chain
